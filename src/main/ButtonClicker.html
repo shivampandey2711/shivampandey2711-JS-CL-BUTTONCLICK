@@ -13,56 +13,48 @@
     
     <h1>Button clicker</h1>
     
-    <p id = "text1">click the button ...</p>
+    <p id="text1">click the button ...</p>
     
-    <button id = "button1">click me 1</button>
+    <button id="button1">click me 1</button>
     
-    <p id = "text2">now click this button ...</p>
+    <p id="text2">now click this button ...</p>
     
-    <button id = "button2">click me 2</button>
-    
+    <button id="button2">click me 2</button>
     
     <script>
         /**
-         * It's time to introduce JavaScript. For now, we'll think of JavaScript as a language that attaches itself
-         * to an HTML file, although this will change in the future. JavaScript's main use will be in lending
-         * interactivity to a site. Primarily, JavaScript will be used to manipulate elements in the DOM - the DOM,
-         * standing for document-object-model, is the logical tree representation of all elements on the site.
-         * 
-         * Namely, in the code below, the elements with id 'text1' and 'button1' are retrieved from the DOM. You may notice that
-         * these variables are defined with 'var.' Defining types are not required in JavaScript, which we'll get to
-         * later. When the event 'onclick' occurs for button1, the function 'button1clicked' is executed - this works
-         * because the function 'button1click' is actually being passed as a variable - already JavaScript is quite
-         * different from Java!
+         * JavaScript will be used to manipulate elements in the DOM to lend interactivity to the site.
+         * The elements with id 'text1' and 'button1' are retrieved from the DOM. When 'button1' is clicked,
+         * 'button1clicked' is executed to change the inner text of 'text1' to "button 1 clicked".
          *
-         * Be sure to test this out by opening this HTML file in your browser. As you can see with how the inner text
-         * of text1 is changed, JavaScript has an easy time directly modifying the webpage in real-time.
-         *
-         * TODO: your next task is to replicate this functionality for button2, such that the text 'now click this button'
-         * is changed to 'button 2 clicked' when button2 is clicked.
+         * TODO: Replicate this functionality for button2 to change 'text2' to "button 2 clicked" when button2 is clicked.
          */
 
-
-        /* Here, we are getting the button1 HTML element as a JavaScript object  */
+        /* Get button1 and add a click event listener */
         var button1 = document.getElementById("button1");
-        
-        /* Here, we are adding a click event to button1; our custom logic for this
-            event will be defined later in a function called "button1clicked" */
         button1.onclick = button1clicked;
 
-        /* Here, we are getting the text1 HTML element as a JavaScript object */
-        var text1 = document.getElementById("text1")
+        /* Get text1 element */
+        var text1 = document.getElementById("text1");
         
-        /* Here, we are defining the click event's logic that will be performed when the button is clicked */
+        /* Define the function to change text1 */
         function button1clicked() {
-            text1.innerText = "button 1 clicked"
+            text1.innerText = "button 1 clicked";
         }
 
-        //    start coding here
+        // Start coding here for button2
 
+        /* Get button2 and add a click event listener */
+        var button2 = document.getElementById("button2");
+        button2.onclick = button2clicked;
 
-        /* OPTIONAL PRACTICE: If you want more practice later, try using a button to alter text of a tag
-            other than a p tag. For example, try altering the text of an unordered list. */
+        /* Get text2 element */
+        var text2 = document.getElementById("text2");
+
+        /* Define the function to change text2 */
+        function button2clicked() {
+            text2.innerText = "button 2 clicked";
+        }
 
     </script>
 
